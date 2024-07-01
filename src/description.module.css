@@ -1,0 +1,105 @@
+.descriptions {
+    display: flex;
+    justify-content: flex-start; /* 아이템들을 왼쪽으로 정렬 */
+    align-items: flex-start; /* 아이템들을 위쪽으로 정렬 */
+    margin-bottom: 10px;
+    text-decoration: none; /* 밑줄 없애기 */
+  }
+  
+  .descriptions-inner {
+    display: flex;
+    flex-direction: column; /* 아이템들을 세로로 정렬 */
+  }
+  
+  .name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+  }
+  
+  .price-area {
+    display: flex;
+    align-items: flex-start; /* 아이템들을 위쪽으로 정렬 */
+    margin-bottom: 10px;
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+  }
+  
+  .price-info {
+    display: flex;
+    align-items: center; /* 아이템들을 세로 가운데 정렬 */
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+  }
+  
+  .base-price {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  .price-value {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .instant-discount-rate {
+    background-color: #ffc107;
+    color: #333;
+    padding: 2px 5px;
+    margin-right: 5px;
+  }
+  
+  .badge {
+    margin-left: 10px;
+  }
+  
+  .arrival-info {
+    font-size: 14px;
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+  }
+  
+  .free-shipping-nudge-wrap {
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+  }
+  
+  .rating-star {
+    display: flex;
+    align-items: center;
+  }
+  
+  .rating {
+    display: block;
+    width: 90%;
+    background-color: #ffc107;
+  }
+  
+  .rating-total-count {
+    font-size: 14px;
+    color: black;
+  }
+  
+  .reward-cash-badge {
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+    display: flex;
+  }
+  
+  .reward-cash-badge__inr {
+    display: flex;
+    align-items: center;
+  }
+  
+  .reward-cash-ico {
+    height: 20px;
+    margin-right: 5px;
+  }
+  
+  .reward-cash-txt {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .price-value strong {
+    font-weight: bold; /* .price-value 내의 강조 텍스트 스타일 */
+  }
+  

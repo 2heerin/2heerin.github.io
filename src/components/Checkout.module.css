@@ -1,0 +1,71 @@
+/* Checkout.module.css */
+
+.checkoutContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .adContent {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .adImage {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .adMessage {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .actionContainer {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .actionContainer p {
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .researcherControls {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 10px;
+  }
+  
+  select,
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  

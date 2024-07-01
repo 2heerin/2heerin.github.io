@@ -1,0 +1,21 @@
+/* Ad.module.css */
+
+.adContainer {
+    background-color: #f0f0f0; /* 광고 배경색 설정 */
+    padding: 20px;
+  }
+  
+  .adContent {
+    text-align: center;
+  }
+  
+  .adTitle {
+    color: #333; /* 텍스트 색상 설정 */
+    font-size: 24px;
+  }
+  
+  .adMessage {
+    color: #666; /* 텍스트 색상 설정 */
+    font-size: 16px;
+  }
+  

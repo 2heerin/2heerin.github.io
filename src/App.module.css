@@ -1,4 +1,106 @@
-.title {
-    font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 15px;
+/* App.module.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    text-decoration: none;
+  }
+  
+  .header {
+    flex: 0 0 auto;
+    background-color: #fff;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .mainContent {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;  /* 뷰포트 너비에 맞춤 */
+  }
+  
+  .contentWrapper {
+    max-width: 100%;  /* 최대 너비 조정 */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+  }
+  
+  .sidebarLeft, .sidebarRight {
+    flex: 0 0 200px; /* 사이드바 너비를 줄입니다. 필요에 따라 조정 가능 */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .sidebarLeft {
+    background-color: #fff;
+    color: #fff;
+    margin-left: 40px;
+  }
+  
+  .sidebarRight {
+    background-color: #fff;
+    color: #fff;
+    margin-right: 40px;
+  }
+  
+  .centralMainArea {
+    flex: 1; /* 중앙 영역이 남은 공간을 차지하도록 설정 */
+    color: #fff;
+    text-align: center;
+  }
+  
+  .productGrid {
+    display: grid;
+    background-color: #808080;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap; /* 가로 공간이 부족할 경우 줄 바꿈 */
+    justify-content: center;
+    align-items: center;
+    color: black;
+    padding: 10px;
+  }
+  
+  .productCard {
+    flex: 1 1 200px; /* 카드들이 균일하게 배치될 수 있도록 설정 */
+    background-color: white;
+    border: 2px solid #808080; /* 테두리 색상과 두께 설정 */
+    padding: 20px;
+    text-align: center;
+    height: 514px;
+    margin: 10px; /* 카드 간격 조정 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 카드에 약간의 그림자 추가 */
+    border-radius: 8px; /* 모서리를 둥글게 설정 */
+    transition: transform 0.2s; /* 마우스를 올렸을 때 애니메이션 설정 */
+    position: relative; /* 상대적 위치 지정 */
+    overflow-x: hidden;
+    text-decoration: none;
+    
+  }
+
+.productCard {
+    transition: transform 0.2s; /* 이미지에 애니메이션 설정 */
 }
+
+.productCard:hover {
+    transform: translateY(-10px); /* 마우스를 올렸을 때 이미지가 위로 이동 */
+}
+  .footer {
+    flex: 0 0 auto;
+    background-color: #fff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  .contentWrapper {
+    display: flex; /* 요소들을 가로로 나란히 배치 */
+    justify-content: center; /* 가운데 정렬 */
+  }
+
+  
