@@ -13,6 +13,7 @@
     background-color: #fff;
     color: #fff;
     text-align: center;
+    justify-content: center;
   }
   
   .mainContent {
@@ -33,21 +34,18 @@
   }
   
   .sidebarLeft, .sidebarRight {
-    flex: 0 0 200px; /* 사이드바 너비를 줄입니다. 필요에 따라 조정 가능 */
-    padding: 20px;
+    flex: 0 0 300px; /* 사이드바 너비를 줄입니다. 필요에 따라 조정 가능 */
     text-align: center;
   }
   
   .sidebarLeft {
     background-color: #fff;
     color: #fff;
-    margin-left: 40px;
   }
   
   .sidebarRight {
     background-color: #fff;
     color: #fff;
-    margin-right: 40px;
   }
   
   .centralMainArea {
@@ -95,7 +93,6 @@
     flex: 0 0 auto;
     background-color: #fff;
     color: #fff;
-    padding: 10px;
     text-align: center;
   }
   .contentWrapper {

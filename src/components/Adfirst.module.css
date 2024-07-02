@@ -1,0 +1,12 @@
+.adfirstContainer {
+    background-color: white;
+    height: 100vh; /* 화면 세로 중앙 정렬을 위해 추가 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .adfirstContainer h1 {
+    color: black;
+    font-size: 24px;
+  }

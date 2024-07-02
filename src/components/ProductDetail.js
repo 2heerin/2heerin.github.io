@@ -20,19 +20,24 @@ const ProductDetail = ({ condition }) => {
   }, []); // 빈 배열을 넘기면 컴포넌트가 처음 마운트될 때만 실행됩니다.
 
   const handleAddToCart = () => {
+    console.log('Condition:', condition);
     if (condition === 'A') {
       alert('상품이 장바구니에 담겼습니다.');
       localStorage.setItem('cart', JSON.stringify({ selected: product }));
-    } else {
-      alert('B조건에서는 장바구니에 담을 수 없습니다. 뒤로가기를 눌러주세요.');
+    } 
+    else {
+      alert('B조건에서는 이전 상세페이지를 전부 확인한 후 장바구니 버튼을 누를 수 있습니다. 뒤로가기 버튼을 눌러주세요.');
     }
   };
 
   const handleBack = () => {
+    console.log('Condition:', condition);
     if (condition === 'B') {
       navigate(-1); // 이전 페이지로 이동
+    } else if (condition === 'A') {
+      alert('A조건에서는 뒤로가기를 누를 수 없습니다. 장바구니 담기 버튼을 클릭해 주세요.');
     } else {
-      alert('A조건에서는 뒤로가기를 누를 수 없습니다. 장바구니를 눌러주세요.');
+      alert('조건이 올바르지 않습니다.');
     }
   };
   const handleProductClick = (productId) => {
@@ -41,6 +46,7 @@ const ProductDetail = ({ condition }) => {
   };
 
   const handleBuyNow = () => {
+    console.log('Condition:', condition);
     alert('실험 절차에 따라 장바구니 담기 혹은 뒤로가기만 누를 수 있습니다.');
   };
 

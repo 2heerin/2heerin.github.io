@@ -1,22 +1,46 @@
-/* Ad.module.css */
-
-.adContainer {
-    background-color: #f0f0f0; /* 광고 배경색 설정 */
-    padding: 20px;
+.adminContainer {
+    background-color: white;
+    display: flex;
+    justify-content: center;
   }
   
-  .adContent {
-    text-align: center;
-  }
-  
-  .adTitle {
-    color: #333; /* 텍스트 색상 설정 */
+  .adminContainer h2 {
+    color: black;
     font-size: 24px;
   }
-  
-  .adMessage {
-    color: #666; /* 텍스트 색상 설정 */
+  .adminContainer h1 {
+    color: black;
     font-size: 24px;
+  }
+  .productContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .custom_ad_input {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    justify-content:center;
+  }
+  
+  .custom_ad_input:focus {
+    border-color: #007bff;
+    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.3);
+    outline: none;
+  }
+  
+  .custom_ad_input::placeholder {
+    color: #999;
+    font-style: italic;
+    justify-content: center;
   }
   .btn1 {
     width: 100px;
@@ -38,7 +62,7 @@
 .btn1:hover {
     color: white;
     border-color: #122c64;
-    background-color: #346aff
+    background-color: #122c64;
 }
 .btn1:hover .btn1_txt {
     color: white;
@@ -75,3 +99,5 @@
 .btn2__txt {
     color: white;
 }
+
+  

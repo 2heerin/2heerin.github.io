@@ -1,71 +1,64 @@
-/* Checkout.module.css */
 
-.checkoutContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-  }
-  
-  .adContent {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .adImage {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  .adMessage {
+.text {
+    color: #000;
+    font-size: 24px;
+}
+
+.btn1 {
+    width: 200px;
+    height: 40px;
     font-size: 16px;
-    line-height: 1.5;
-  }
-  
-  .actionContainer {
-    margin-top: 20px;
+    border-width: 1px;
+    border-color: #346aff;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    background-color: white;
+    color: #346aff;
     text-align: center;
-  }
-  
-  .actionContainer p {
-    margin-bottom: 10px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #007bff;
+    text-justify: center;
+    line-height: 42px;
+    text-decoration: none;
+}
+
+
+.btn1:hover {
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  .researcherControls {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  label {
-    margin-bottom: 10px;
-  }
-  
-  select,
-  input,
-  textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  textarea {
-    resize: vertical;
-  }
+    border-color: #122c64;
+    background-color: #346aff
+}
+.btn1:hover .btn1_txt {
+    color: white;
+}
+.btn1_txt {
+    color: #346aff;
+    border-color: #122c64;
+}
+
+.btn2 {
+    margin-top: 10px;
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    border-width: 1px;
+    border-color: white;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    background-color: #346aff;
+    color: white;
+    line-height: 42px;
+    text-decoration: none;
+}
+
+.btn2:hover {
+    background-color: #122c64;
+    border-color: #122c64;
+}
+
+.btn2:hover .btn2__txt {
+    font-weight: bold;
+}
+
+.btn2__txt {
+    color: white;
+}
   
