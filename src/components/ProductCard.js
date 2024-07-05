@@ -23,18 +23,17 @@ function ProductCard({ id, productName, productPrice, onProductClick }) {
                 <span className={styles['instant-discount-rate']}>{Math.round(discountRate * 100)}%</span>
                 <del className={styles['base-price']}>{originalPrice}원</del>
               </span>
-              <em className={styles.sale}>
+              <div className={styles.sale} >
                 <strong className={styles['price-value']} style={{ color: '#cb1400' }}>
                   {productPrice.toLocaleString()}원
                 </strong>
-                <span className={styles.badge}>
                   <img
+                  style={{justifyContent: "center",alignContent:"center", marginLeft:10}}                  
                     src="https://image8.coupangcdn.com/image/badges/falcon/v1/web/rocketwow-bi-16@2x.png"
                     height="16"
                     alt="로켓배송"
                   />
-                </span>
-              </em>
+              </div>
             </div>
             <div className={styles.delivery}>
               <span className={styles['arrival-info']}>

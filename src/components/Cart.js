@@ -13,25 +13,28 @@ const Cart = () => {
 
   useEffect(() => {
     const cartItem = JSON.parse(localStorage.getItem('cart'));
-    if (cartItem) {
+    if (cartItem && cartItem.selected) {
       setProduct(cartItem.selected);
       setTimeout(() => {
         alert('확인이 끝났으면 다음 버튼을 눌러주세요');
-        // 다음 광고 페이지로 이동
-      }, 1000);
+      }, 5000);
     }
   }, []);
 
   if (!product) {
     return <p>장바구니에 담긴 상품이 없습니다.</p>;
   }
+  const handleProductClick = () => {};
   const handleClick = () => {
-      navigate('/adfist');
+    const cartItem = JSON.parse(localStorage.getItem('cart'));
+    if (cartItem && cartItem.selected) {
+        navigate('/adfirst', { state: { cartItem: cartItem.selected } });
+    }
   };
 
   return (
     <div style={{ flex: 1 }}>
-      <img src={CartTop} alt="Cart Top" width={1100} />
+      <img src={CartTop} alt="Cart Top" width={1300} />
       <div className={styles.productDetailContainer}>
         <div className={styles.delivery_enterprise_wrapper} style={{ flexDirection: "row", padding: 30, fontSize: 24 }}>
           <img src={product.imageUrl} alt={product.name} width={392} height={392} style={{ alignContent: "flex-start" }} />
@@ -40,6 +43,7 @@ const Cart = () => {
               id={product.id}
               productName={product.name}
               productPrice={product.price}
+              onProductClick={handleProductClick}
             />
             <div>
               <Link to="/adfirst">
@@ -56,7 +60,7 @@ const Cart = () => {
         <h2>{product.name}</h2>
         <p>{product.price} 원</p>
       </div>
-      <img src={CartBottom} alt="Cart Bottom" width={1100} />
+      <img style= {{marginTop: -120}} src={CartBottom} alt="Cart Bottom" width={1100} />
     </div>
   );
 };
@@ -66,7 +70,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Cart />} />
-        <Route path="/adfirst" element={<AdFirst />} />
+        <Route path="/adfirst" element={<AdFirst/>} />
       </Routes>
     </Router>
   );

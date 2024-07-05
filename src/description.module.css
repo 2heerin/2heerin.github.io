@@ -38,7 +38,7 @@
   }
   
   .price-value {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold;
     color: #333;
   }
@@ -101,5 +101,11 @@
   
   .price-value strong {
     font-weight: bold; /* .price-value 내의 강조 텍스트 스타일 */
+  }
+  .sale {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
   }
   

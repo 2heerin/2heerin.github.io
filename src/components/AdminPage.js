@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import styles from "./AdminPage.module.css";
 
-const AdminPage = ({ initialAd, initialProducts, setCondition, setProducts, setAdData,setConditionad }) => {
+const AdminPage = ({ initialAd, initialProducts, setCondition, setProducts, setAdData, setConditionad }) => {
   const [newCondition, setNewCondition] = useState('A');
-  const [newProducts, setNewProducts] = useState([]);
-  const [newAdData, setNewAdData] = useState({ imageUrl: '', adMessage: '' });
+  const [newProducts, setNewProducts] = useState(initialProducts);
+  const [newAdData, setNewAdData] = useState(initialAd[0]);
   const [newConditionad, setNewConditionad] = useState('1');
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const AdminPage = ({ initialAd, initialProducts, setCondition, setProducts, setA
     if (savedCondition) setNewCondition(savedCondition);
     if (savedAdData) setNewAdData(savedAdData);
     if (savedConditionad) setNewConditionad(savedConditionad);
-  }, []);
+  }, [initialAd, initialProducts]);
 
   const handleSave = () => {
     localStorage.setItem('condition', newCondition);
@@ -59,13 +59,15 @@ const AdminPage = ({ initialAd, initialProducts, setCondition, setProducts, setA
 
     if (selectedConditionad === "1") {
       setNewAdData({
-        imageUrl: 'url_for_condition_1_image',
-        adMessage: 'Ad message for condition 1',
+        id: 1,
+        imageUrl: '//thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2023/09/21/11/3/edfa01cf-a7bc-4c08-a6b5-7ea0aaa5797a.jpg',
+        adMessage: '광고 1',
       });
     } else if (selectedConditionad === "2") {
       setNewAdData({
-        imageUrl: 'url_for_condition_2_image',
-        adMessage: 'Ad message for condition 2',
+        id:2,
+        imageUrl: '//thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2023/09/21/15/0/a81163f2-6cbd-4712-b8a0-47fc5811a437.jpg',
+        adMessage: '변경 광고 2',
       });
     }
   };
