@@ -90,7 +90,6 @@ const AdminPage = ({ initialAd, initialProducts, setCondition, setProducts, setA
         </div>
         <div>
           <h2>광고 조건 설정</h2>
-          <h1>조건 변경 후 저장해 주세요</h1>
           <select className={styles.custom_ad_input} style={{ textAlign: 'center' }} value={newConditionad} onChange={handleConditionadChange}>
             <option value="1">조건 1</option>
             <option value="2">조건 2</option>
