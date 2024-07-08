@@ -12,7 +12,7 @@
   }
   
   .name {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     color: #000;
     margin-bottom: 10px;
@@ -40,7 +40,10 @@
   .price-value {
     color: black;
     text-align: left;
-    display: inline-block; /* 텍스트 정렬을 위한 설정 */
+    display: flex; /* 텍스트 정렬을 위한 설정 */
+    font-size: 24px;
+    justify-content: center;
+    
   }
   
   .instant-discount-rate {

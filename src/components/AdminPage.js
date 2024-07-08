@@ -12,12 +12,13 @@ const AdminPage = ({ initialAd, initialProducts, setCondition, setProducts, setA
     setNewProducts(savedProducts);
 
     const savedCondition = localStorage.getItem('condition');
-    const savedAdData = JSON.parse(localStorage.getItem('adData')) || initialAd;
-    const savedConditionad = localStorage.getItem('conditionad');
-
     if (savedCondition) setNewCondition(savedCondition);
-    if (savedAdData) setNewAdData(savedAdData);
+
+    const savedConditionad = localStorage.getItem('conditionad');
     if (savedConditionad) setNewConditionad(savedConditionad);
+
+    const savedAdData = JSON.parse(localStorage.getItem(`adData${savedConditionad}`)) || initialAd[0];
+    if (savedAdData) setNewAdData(savedAdData);
   }, [initialAd, initialProducts]);
 
   const handleSave = () => {
@@ -27,7 +28,7 @@ const AdminPage = ({ initialAd, initialProducts, setCondition, setProducts, setA
     localStorage.setItem('conditionad', newConditionad);
     setConditionad(newConditionad);
 
-    localStorage.setItem('adData', JSON.stringify(newAdData));
+    localStorage.setItem(`adData${newConditionad}`, JSON.stringify(newAdData));
     setAdData(newAdData);
 
     localStorage.setItem('products', JSON.stringify(newProducts));
@@ -57,23 +58,24 @@ const AdminPage = ({ initialAd, initialProducts, setCondition, setProducts, setA
     const selectedConditionad = e.target.value;
     setNewConditionad(selectedConditionad);
 
-    if (selectedConditionad === "1") {
-      setNewAdData({
+    const adDataForCondition = JSON.parse(localStorage.getItem(`adData${selectedConditionad}`)) || 
+      (selectedConditionad === "1" ? {
         id: 1,
         imageUrl: '//thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2024/05/23/12/6/920b39f0-e1f8-4892-b156-477513f93920.jpg',
         adMessage: '광고 1',
-      });
-    } else if (selectedConditionad === "2") {
-      setNewAdData({
-        id:2,
+      } : {
+        id: 2,
         imageUrl: '//thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2023/09/22/11/3/7edf2955-61bd-4adc-bcc1-7a3851a26cf9.jpg',
         adMessage: '변경 광고 2',
       });
-    }
+    
+    setNewAdData(adDataForCondition);
   };
 
   const handleAdDataChange = (key, value) => {
-    setNewAdData({ ...newAdData, [key]: value });
+    const updatedAdData = { ...newAdData };
+    updatedAdData[key] = value;
+    setNewAdData(updatedAdData);
   };
 
   return (
@@ -88,6 +90,7 @@ const AdminPage = ({ initialAd, initialProducts, setCondition, setProducts, setA
         </div>
         <div>
           <h2>광고 조건 설정</h2>
+          <h1>조건 변경 후 저장해 주세요</h1>
           <select className={styles.custom_ad_input} style={{ textAlign: 'center' }} value={newConditionad} onChange={handleConditionadChange}>
             <option value="1">조건 1</option>
             <option value="2">조건 2</option>

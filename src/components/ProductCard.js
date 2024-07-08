@@ -37,7 +37,7 @@ function ProductCard({ id, productName, productPrice, onProductClick }) {
                 <img
                   style={{ justifyContent: "center", alignContent: "center", marginLeft: 10 }}                  
                   src="https://image8.coupangcdn.com/image/badges/falcon/v1/web/rocketwow-bi-16@2x.png"
-                  height="16"
+                  height="32"
                   alt="로켓배송"
                 />
               </div>

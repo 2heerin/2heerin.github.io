@@ -13,7 +13,7 @@ const Ad = () => {
       console.log('localStorage에서 가져온 conditionad:', conditionad); // 디버깅을 위한 콘솔 로그 추가
 
       if (conditionad) {
-        const storedAdDataList = JSON.parse(localStorage.getItem('adData'));
+        const storedAdDataList = JSON.parse(localStorage.getItem(`adData${conditionad}`));
         console.log('localStorage에서 가져온 adDataList:', storedAdDataList); // 디버깅을 위한 콘솔 로그 추가
 
         let matchedAdData;
