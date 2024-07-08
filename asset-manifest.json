@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/2heerin/cart/static/css/main.b543bc6c.css",
-    "main.js": "/2heerin/cart/static/js/main.01976ae7.js",
-    "static/media/상단바.png": "/2heerin/cart/static/media/상단바.cbb8cfd91fb1a897cfc4.png",
-    "static/media/CartTop.png": "/2heerin/cart/static/media/CartTop.35bf40df76e47581d883.png",
-    "static/media/CartBottom.png": "/2heerin/cart/static/media/CartBottom.c8559ff08026c1e18d25.png",
-    "static/media/배송.png": "/2heerin/cart/static/media/배송.0a09a840fb25d960bbcb.png",
-    "index.html": "/2heerin/cart/index.html",
-    "main.b543bc6c.css.map": "/2heerin/cart/static/css/main.b543bc6c.css.map",
-    "main.01976ae7.js.map": "/2heerin/cart/static/js/main.01976ae7.js.map"
+    "main.css": "/cart/static/css/main.b543bc6c.css",
+    "main.js": "/cart/static/js/main.0d59ebde.js",
+    "static/media/상단바.png": "/cart/static/media/상단바.cbb8cfd91fb1a897cfc4.png",
+    "static/media/CartTop.png": "/cart/static/media/CartTop.35bf40df76e47581d883.png",
+    "static/media/CartBottom.png": "/cart/static/media/CartBottom.c8559ff08026c1e18d25.png",
+    "static/media/배송.png": "/cart/static/media/배송.0a09a840fb25d960bbcb.png",
+    "index.html": "/cart/index.html",
+    "main.b543bc6c.css.map": "/cart/static/css/main.b543bc6c.css.map",
+    "main.0d59ebde.js.map": "/cart/static/js/main.0d59ebde.js.map"
   },
   "entrypoints": [
     "static/css/main.b543bc6c.css",
-    "static/js/main.01976ae7.js"
+    "static/js/main.0d59ebde.js"
   ]
 }
