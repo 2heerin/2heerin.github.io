@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/cart/static/css/main.2d3444ec.css",
-    "main.js": "/cart/static/js/main.9aac7490.js",
+    "main.js": "/cart/static/js/main.95191ead.js",
     "static/media/상단바.png": "/cart/static/media/상단바.cbb8cfd91fb1a897cfc4.png",
     "static/media/CartTop.png": "/cart/static/media/CartTop.35bf40df76e47581d883.png",
     "static/media/CartBottom.png": "/cart/static/media/CartBottom.c8559ff08026c1e18d25.png",
     "static/media/배송.png": "/cart/static/media/배송.0a09a840fb25d960bbcb.png",
     "index.html": "/cart/index.html",
     "main.2d3444ec.css.map": "/cart/static/css/main.2d3444ec.css.map",
-    "main.9aac7490.js.map": "/cart/static/js/main.9aac7490.js.map"
+    "main.95191ead.js.map": "/cart/static/js/main.95191ead.js.map"
   },
   "entrypoints": [
     "static/css/main.2d3444ec.css",
-    "static/js/main.9aac7490.js"
+    "static/js/main.95191ead.js"
   ]
 }
