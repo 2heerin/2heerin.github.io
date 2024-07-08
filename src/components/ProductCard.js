@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../description.module.css'; // CSS 모듈 임포트
 import Rate from '../assets/rate.png';
 
 function ProductCard({ id, productName, productPrice, onProductClick }) {
-  const discountRate = 0.19; // 할인율 19%
+  const discountRates = [0.1, 0.15, 0.19, 0.25, 0.3, 0.35]; // 6개의 할인율 배열
+  const [discountRate, setDiscountRate] = useState(0); // 초기 할인율 상태
+
+  useEffect(() => {
+    const randomDiscountRate = discountRates[Math.floor(Math.random() * discountRates.length)];
+    setDiscountRate(randomDiscountRate);
+  }, []);
+
   const originalPrice = Math.round(productPrice / (1 - discountRate)).toLocaleString(); // 원래 가격 계산 및 포매팅
 
   const handleClick = () => {
@@ -23,43 +30,43 @@ function ProductCard({ id, productName, productPrice, onProductClick }) {
                 <span className={styles['instant-discount-rate']}>{Math.round(discountRate * 100)}%</span>
                 <del className={styles['base-price']}>{originalPrice}원</del>
               </span>
-              <div className={styles.sale} >
+              <div className={styles.sale}>
                 <strong className={styles['price-value']} style={{ color: '#cb1400' }}>
                   {productPrice.toLocaleString()}원
                 </strong>
-                  <img
-                  style={{justifyContent: "center",alignContent:"center", marginLeft:10}}                  
-                    src="https://image8.coupangcdn.com/image/badges/falcon/v1/web/rocketwow-bi-16@2x.png"
-                    height="16"
-                    alt="로켓배송"
-                  />
+                <img
+                  style={{ justifyContent: "center", alignContent: "center", marginLeft: 10 }}                  
+                  src="https://image8.coupangcdn.com/image/badges/falcon/v1/web/rocketwow-bi-16@2x.png"
+                  height="16"
+                  alt="로켓배송"
+                />
               </div>
             </div>
             <div className={styles.delivery}>
               <span className={styles['arrival-info']}>
-                <em style={{ color: '#008C00' }}>오늘(목) 도착 보장</em>
+                <em style={{ fontSize: '14px', color: '#008C00' , marginBottom: 10}}>오늘(목) 도착 보장</em>
                 <div>
-                  <span style={{ fontSize: '14px', color: '#454F5B' }}>무료배송 ∙ 무료반품</span>
+                  <span style={{ fontSize: '14px', color: '#454F5B', marginBottom: 10 }}>무료배송 ∙ 무료반품</span>
                 </div>
               </span>
             </div>
           </div>
         </div>
-        <div className={styles['rating-star']} style={{flexDirection: "row", marginLeft: -10}}>
-            <img src={Rate} width="80" height="40" alt="5.0" />
-            <span className={styles['rating-total-count']} style={{ justifyContent: "flex-start" , alignContent: "flex-start"}}>
+        <div className={styles['rating-star']} style={{ flexDirection: "row", marginLeft: -10 }}>
+          <img src={Rate} width="80" height="40" alt="5.0" />
+          <span className={styles['rating-total-count']} style={{ justifyContent: "flex-start", alignContent: "flex-start" }}>
             (13702)
-             </span>
+          </span>
         </div>
         <div className={styles['benefit-badges']}>
           <div className={styles['reward-cash-badge']}>
-            <div className={styles['reward-cash-badge__inr']} style={{flexDirection: "row"}}>
+            <div className={styles['reward-cash-badge__inr']} style={{ flexDirection: "row" }}>
               <img
                 src="https://image6.coupangcdn.com/image/badges/cashback/web/list-cash-icon@2x.png"
                 alt=""
                 className={styles['reward-cash-ico']}
               />
-              <span className={styles['reward-cash-txt']} style={{justifycontent: "flex-start"}} >최대 124원 적립</span>
+              <span className={styles['reward-cash-txt']} style={{ justifyContent: "flex-start" }}>최대 124원 적립</span>
             </div>
           </div>
         </div>

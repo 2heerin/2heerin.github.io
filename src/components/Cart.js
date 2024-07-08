@@ -3,7 +3,7 @@ import styles from './Cart.module.css';
 import CartTop from '../assets/CartTop.png'; // 예시 경로, 실제 경로에 따라 수정하세요.
 import CartBottom from '../assets/CartBottom.png'; // 예시 경로, 실제 경로에 따라 수정하세요.
 import ProductCard from './ProductCard';
-import style_des from "../description.module.css";
+import Order from "./order";
 import AdFirst from './Adfirst';
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
 
@@ -36,21 +36,21 @@ const Cart = () => {
     <div style={{ flex: 1 }}>
       <img src={CartTop} alt="Cart Top" width={1300} />
       <div className={styles.productDetailContainer}>
-        <div className={styles.delivery_enterprise_wrapper} style={{ flexDirection: "row", padding: 30, fontSize: 24 }}>
-          <img src={product.imageUrl} alt={product.name} width={392} height={392} style={{ alignContent: "flex-start" }} />
-          <div className='wrap' style={{ flexDirection: "column" }}>
-            <ProductCard
-              id={product.id}
-              productName={product.name}
-              productPrice={product.price}
-              onProductClick={handleProductClick}
-            />
-            <div>
-              <Link to="/adfirst">
+        <div className={styles.delivery_enterprise_wrapper} style={{ flexDirection: "row", fontSize: 24 }}>
+          <div className={styles.wrap} style={{ flexDirection: "row" }}>
+          <div className={styles.border} style={{ flexDirection: "row" }}>
+                <img src={product.imageUrl} alt={product.name} width={320} height={320} style={{ alignContent: "center" }} />
+                <div style={{ width: '500px', height: '320px', marginTop:20}}>
+                <ProductCard id={product.id} productName={product.name} productPrice={product.price} onProductClick={handleProductClick}/>  
+                </div>
+                </div>
+            <div className= {styles.order}>
+                <Order id={product.id} productPrice={product.price}/>
+                <Link to="/adfirst">
                 <button className={styles.btn1}
                     onClick = {handleClick}
                 >다음</button>
-              </Link>
+                </Link>
             </div>
           </div>
         </div>

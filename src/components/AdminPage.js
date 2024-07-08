@@ -60,13 +60,13 @@ const AdminPage = ({ initialAd, initialProducts, setCondition, setProducts, setA
     if (selectedConditionad === "1") {
       setNewAdData({
         id: 1,
-        imageUrl: '//thumbnail10.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2023/09/21/11/3/edfa01cf-a7bc-4c08-a6b5-7ea0aaa5797a.jpg',
+        imageUrl: '//thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2024/05/23/12/6/920b39f0-e1f8-4892-b156-477513f93920.jpg',
         adMessage: '광고 1',
       });
     } else if (selectedConditionad === "2") {
       setNewAdData({
         id:2,
-        imageUrl: '//thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2023/09/21/15/0/a81163f2-6cbd-4712-b8a0-47fc5811a437.jpg',
+        imageUrl: '//thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2023/09/22/11/3/7edf2955-61bd-4adc-bcc1-7a3851a26cf9.jpg',
         adMessage: '변경 광고 2',
       });
     }

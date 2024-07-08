@@ -12,7 +12,7 @@
   }
   
   .name {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     color: #000;
     margin-bottom: 10px;
@@ -38,9 +38,9 @@
   }
   
   .price-value {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
+    color: black;
+    text-align: left;
+    display: inline-block; /* 텍스트 정렬을 위한 설정 */
   }
   
   .instant-discount-rate {
@@ -57,6 +57,7 @@
   .arrival-info {
     font-size: 14px;
     text-align: left; /* 텍스트 왼쪽 정렬 */
+    margin-bottom: 10px;
   }
   
   .free-shipping-nudge-wrap {

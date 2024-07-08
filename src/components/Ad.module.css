@@ -15,38 +15,38 @@
   
   .adMessage {
     color: black; /* 텍스트 색상 설정 */
-    font-size: 24px;
+    font-size: 32px;
   }
   
   .btn1 {
-    width: 100px;
-    height: 40px;
+    padding: 10px 20px;
+    width: 50%;
+    height: 42px;
     font-size: 16px;
-    border-width: 1px;
-    border-color: #346aff;
-    border-radius: 10px;
-    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
-    background-color: white;
-    color: #346aff;
-    text-align: center;
-    line-height: 42px;
-    text-decoration: none;
-  }
-  
-  .btn1:hover {
-    color: white;
-    border-color: #122c64;
     background-color: #346aff;
-  }
-  
-  .btn1:hover .btn1_txt {
-    color: white;
-  }
-  
-  .btn1_txt {
-    color: #346aff;
+    border: 1px solid #346aff;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    margin: 4px 2px;
+    flex: 0 1 auto; /* 버튼이 유연하게 크기를 조정하도록 설정 */
+    box-sizing: border-box; /* 크기 계산 포함 */
+}
+
+
+.btn1:hover {
+    background-color: #122c64;
     border-color: #122c64;
-  }
+    color: white;
+}
+.btn1:hover .btn1_txt {
+    background-color: #346aff;
+    color: white;
+}
+.btn1_txt {
+    background-color: #346aff;
+    color: white;
+}
+
   
   .btn2 {
     margin-top: 10px;

@@ -20,21 +20,26 @@ function App() {
   const [newConditionad, setNewConditionad] = useState('1');
   
   const initialProducts = [
-    { id: 1, name: '초기 상품 1', price: '1000', imageUrl: '//thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2023/05/31/9/5/6eb652f5-8aaf-4c7a-aea8-c2ac9979f648.jpg' },
-    { id: 2, name: '초기 상품 2', price: '2000', imageUrl: '//thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2023/05/31/9/5/6eb652f5-8aaf-4c7a-aea8-c2ac9979f648.jpg' },
-    { id: 3, name: '초기 상품 3', price: '3000', imageUrl: '//thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2023/05/31/9/5/6eb652f5-8aaf-4c7a-aea8-c2ac9979f648.jpg' },
-    { id: 4, name: '초기 상품 4', price: '4000', imageUrl: '//thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2023/05/31/9/5/6eb652f5-8aaf-4c7a-aea8-c2ac9979f648.jpg' },
-    { id: 5, name: '초기 상품 5', price: '5000', imageUrl: '//thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2023/05/31/9/5/6eb652f5-8aaf-4c7a-aea8-c2ac9979f648.jpg' },
-    { id: 6, name: '초기 상품 6', price: '6000', imageUrl: '//thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2023/05/31/9/5/6eb652f5-8aaf-4c7a-aea8-c2ac9979f648.jpg' }
+    { id: 1, name: '1.18리터 대용량 스텐 텀블러 + 빨대 포함 손잡이 이중 보온 보냉병 아이스 스트로 플로우 보틀 리유저블 핸들 보냉 보온병 캠핑 콜드컵 물병 워터 물통 빨대컵', 
+    price: '17800', imageUrl: '//thumbnail9.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/f975/fcee351f7c061a43be3af1968381dc0df0529b6cdd2c1178ee7522d8816c.jpg' },
+    { id: 2, name: '텀스 마운틴 진공 스텐 텀블러', 
+    price: '2000', imageUrl: '//thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2023/09/21/14/6/bf0858eb-cc05-4b28-8987-8fe16b7435e9.jpg' },
+    { id: 3, name: '뉴리스 진공 스테인리스 텀블러 900ml + 손잡이 + 뚜껑 + 스텐 빨대 + 빨대 세척솔 세트', 
+    price: '12000', imageUrl: '//thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2024/05/23/12/6/920b39f0-e1f8-4892-b156-477513f93920.jpg' },
+    { id: 4, name: '파밀리아레 진공 차량용 대용량 스텐 손잡이 텀블러 890ml + 빨대솔 + 세척솔 + 빨대', 
+    price: '21000', imageUrl: '//thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/79c3/8d7e8fc609e3605fd877c60418618c726c3cdd79f94e1c19ba2873e0e7b8.jpg' },
+    { id: 5, name: '캐리보틀 폴라 보온병 텀블러, 블랙. 970ml', 
+    price: '27700', imageUrl: '//thumbnail8.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/4354176984576808-32cff0de-76aa-4e94-975e-08ce680cd659.jpg' },
+    { id: 6, name: '쉐이크스피어 오리지널 뷰 프로틴쉐이커 쉐이크통 700ml', price: '32900', imageUrl: '//thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/vendor_inventory/78c3/2c0963e67e7565b6720d34146b4718bfdcaeb7575e15c88e89477c778267.jpg' }
   ];
   
   const initialAd = [
     { id: 1,
-      imageUrl: '//thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2023/05/31/9/5/6eb652f5-8aaf-4c7a-aea8-c2ac9979f648.jpg',
+      imageUrl: '//thumbnail6.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2024/05/23/12/6/920b39f0-e1f8-4892-b156-477513f93920.jpg',
       adMessage: "광고 1입니다"
     },
     { id:2,
-      imageUrl: '//thumbnail9.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2023/05/31/9/5/6eb652f5-8aaf-4c7a-aea8-c2ac9979f648.jpg',
+      imageUrl: '//thumbnail7.coupangcdn.com/thumbnails/remote/230x230ex/image/retail/images/2023/09/22/11/3/7edf2955-61bd-4adc-bcc1-7a3851a26cf9.jpg',
       adMessage: "광고 2입니다"
     }
   ];

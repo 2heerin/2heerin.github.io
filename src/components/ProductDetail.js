@@ -66,7 +66,7 @@ const ProductDetail = ({ condition, products }) => {
     <img src={product.imageUrl} alt={product.name} width="392" height="392" />
   </div>
 
-  <div className={style_des.descriptions} style={{ flexDirection: 'column', padding: 30, fontSize: 24 }}>
+  <div className={style_des.descriptions} style={{ flexDirection: 'column',fontSize: 24, width: '390px', height: '390px' }}>
     <ProductCard 
       id={product.id} 
       productName={product.name} 

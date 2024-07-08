@@ -55,8 +55,8 @@ const Ad = () => {
     <div>
       {adData ? (
         <>
-          <img src={adData.imageUrl} alt="광고" />
-          <p style={{ color: 'black' }}>{adData.adMessage}</p>
+          <img src={adData.imageUrl} width="480" height= "480"alt="광고" />
+          <p className={styles.adMessage} style={{ color: 'black' }}>{adData.adMessage}</p>
         </>
       ) : (
         <p style={{ color: 'black' }}>유효한 광고 데이터가 없습니다.</p>
